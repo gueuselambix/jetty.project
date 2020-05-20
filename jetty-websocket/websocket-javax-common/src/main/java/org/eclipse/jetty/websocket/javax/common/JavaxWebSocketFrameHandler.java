@@ -460,7 +460,7 @@ public class JavaxWebSocketFrameHandler implements FrameHandler
 
                 JavaxWebSocketMessageMetadata metadata = new JavaxWebSocketMessageMetadata();
                 metadata.setMethodHandle(methodHandle);
-                metadata.setRegisteredDecoder(registeredDecoder);
+                metadata.setRegisteredDecoder(registeredDecoder); // TODO: decoders
 
                 if (registeredDecoder.implementsInterface(Decoder.Binary.class))
                 {
@@ -618,7 +618,6 @@ public class JavaxWebSocketFrameHandler implements FrameHandler
 
                 // Use JSR356 PongMessage interface
                 JavaxWebSocketPongMessage pongMessage = new JavaxWebSocketPongMessage(payload);
-
                 pongHandle.invoke(pongMessage);
             }
             catch (Throwable cause)

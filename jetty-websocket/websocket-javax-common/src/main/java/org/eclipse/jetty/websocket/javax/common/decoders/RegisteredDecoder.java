@@ -24,6 +24,7 @@ import javax.websocket.EndpointConfig;
 
 import org.eclipse.jetty.websocket.javax.common.InitException;
 
+// TODO: can we cleanup this class
 public class RegisteredDecoder
 {
     // The user supplied Decoder class
